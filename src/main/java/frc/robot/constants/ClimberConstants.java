@@ -5,7 +5,7 @@ import edu.wpi.first.math.trajectory.TrapezoidProfile;
 
 public class ClimberConstants {
 
-    public static final int JOINT_MOTOR_ID = 0;
+    public static final int JOINT_MOTOR_ID = 15;
     public static final int ROTARY_MOTOR_ID = 1;
 
     public static final TrapezoidProfile.Constraints ARM_CONSTRAINTS =
