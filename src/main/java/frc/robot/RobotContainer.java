@@ -9,6 +9,7 @@ import frc.robot.constants.ScoringConstants;
 import frc.robot.constants.VisionConstants;
 import frc.robot.framework.*;
 import frc.robot.subsystems.*;
+import frc.robot.subsystems.LEDSubsystem.AnimationTypes;
 import frc.robot.utils.*;
 import java.util.function.Supplier;
 
@@ -18,6 +19,7 @@ public class RobotContainer {
     CoralQueue coralQueue = CoralQueue.getInstance();
     ElevatorSubsystem elevatorSubsystem = new ElevatorSubsystem();
     ArmSubsystem armSubsystem = new ArmSubsystem();
+    LEDSubsystem ledSubsystem = new LEDSubsystem();
 
     // Controllers
     Controller primaryController = new Controller(0);
@@ -88,6 +90,15 @@ public class RobotContainer {
                         armSubsystem,
                         primaryController,
                         () -> ScoringConstants.ScoringHeights.L2));
+        secondaryController.leftBumper.whileTrue(
+                new RunCommand(() -> ledSubsystem.setRGB(0, 255, 0))
+                );
+        primaryController.leftBumper.whileTrue(
+                new RunCommand(() -> ledSubsystem.setRGB(0, 255, 0))
+                );
+        primaryController.rightBumper.whileTrue(
+                new RunCommand(() -> ledSubsystem.setRGB(255, 0, 0))
+                );
     }
 
     public void robotInit() {

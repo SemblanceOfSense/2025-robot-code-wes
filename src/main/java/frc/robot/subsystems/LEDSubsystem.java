@@ -37,7 +37,7 @@ public class LEDSubsystem extends SubsystemBase {
      * @param b LED blue value 0-255
      * @param g LED green value 0-255
      */
-    private void setRGB(int r, int g, int b) {
+    public void setRGB(int r, int g, int b) {
         if (this.r != r || this.b != b || this.g != g) {
             candle.setLEDs(r, g, b);
             this.r = r;
