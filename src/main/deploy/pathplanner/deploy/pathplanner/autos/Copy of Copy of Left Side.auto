@@ -1,0 +1,79 @@
+{
+  "version": "2025.0",
+  "command": {
+    "type": "sequential",
+    "data": {
+      "commands": [
+        {
+          "type": "named",
+          "data": {
+            "name": "Score"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Left Start - Left Feeder"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Left Feeder - Right Feeder"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "GoToIntake"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Right Feeder - Right Far"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "Score"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Right Far - Right Feeder"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "GoToIntake"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Right Feeder - Right Far"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "Score"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Right Far - Right Feeder"
+          }
+        }
+      ]
+    }
+  },
+  "resetOdom": true,
+  "folder": null,
+  "choreoAuto": false
+}
