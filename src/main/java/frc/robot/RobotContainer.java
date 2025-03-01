@@ -91,14 +91,11 @@ public class RobotContainer {
                         primaryController,
                         () -> ScoringConstants.ScoringHeights.L2));
         secondaryController.leftBumper.whileTrue(
-                new RunCommand(() -> ledSubsystem.setRGB(0, 255, 0))
-                );
+                new RunCommand(() -> ledSubsystem.setAnimation(AnimationTypes.Red)));
         primaryController.leftBumper.whileTrue(
-                new RunCommand(() -> ledSubsystem.setRGB(0, 255, 0))
-                );
+                new RunCommand(() -> ledSubsystem.setRGB(0, 255, 0)));
         primaryController.rightBumper.whileTrue(
-                new RunCommand(() -> ledSubsystem.setRGB(255, 0, 0))
-                );
+                new RunCommand(() -> ledSubsystem.setRGB(255, 0, 0)));
     }
 
     public void robotInit() {
